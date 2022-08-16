@@ -1,0 +1,116 @@
+html {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 240, 45, 1) 100%);
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header p {
+    border: 1px solid rgba(13, 13, 13, 0.885);
+    padding: 0.2em;
+    margin: 0.5em 0;
+}
+
+.container {
+    padding: 0 3%;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-wrapper p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.2em;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.undone {
+    text-decoration: none;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 70%;
+    margin: 1em 0;
+    padding: 0.5em;
+}
+
+.btn-submit {
+    font-size: 1rem;
+    padding: 0.6rem;
+    transition: .3s;
+}
+
+.toggle-btn {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-done {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.btn-remove {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.7rem;
+    visibility: hidden;
+}
+
+.btn-remove::after {
+    content: "x";
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 700;
+    top: -13.5px;
+    left: 1.5px;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.btn-remove:hover::after,
+.btn-remove:focus::after {
+    color: rgb(232, 28, 28);
+    transition: .2s;
+}
+
+@media (max-width:768px) {
+    .flex-wrapper {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 0 0.5em;
+    }
+
+    #form {
+        flex-direction: column;
+    }
+}
